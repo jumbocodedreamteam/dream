@@ -1,0 +1,13 @@
+html, body {
+	display: block;
+}
+
+/* get some kind of scrolling style for the journals? */
+
+li {
+	border: 2px dashed;
+	background-color: gray;
+	padding: 5px;
+}
+
+.content {white-space: pre;}
