@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!--http://weblogs.asp.net/dwahlin/creating-custom-angularjs-directives-part-i-the-fundamentals-->
-<!-- TODO: make title, only show entry with "view" button, sense newline characters -->
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
@@ -26,30 +24,14 @@
         <script type="text/javascript">
 
         var app = angular.module('ngJournals', []);
-        app.directive('ngJournals', function() {
-          return {
-            restrict: 'A',
-            template: '<h3>Past Journal Entries</h3>',
-            //templateURL: 'directives.html' //unclear how to do this: http://www.ng-newsletter.com/posts/directives.html
-            //http://jsfiddle.net/nfreitas/aHfAp/?
-          }
-        });
         app.controller('journals', function($scope, $http) {
-                /*$http.get('journals.json')    Stopping this for now b/c cant assume we're getting data from and writing data to a file; use local storage for now
-                   .then(function(res){
-                        $scope.journals = res.data;
-                        if (localStorage.getItem('journals') == null)
-                            localStorage.setItem('journals', JSON.stringify($scope.journals));
-                        } else {
-                            $scope.journals = JSON.parse(localStorage['journals']);
-                        }       
-                    });*/
                 if (localStorage.getItem('journals') == null) {
                     $scope.journals = [];
                 } else {
                     $scope.journals = JSON.parse(localStorage['journals']);
                 }
                 edit_index = -1;
+
                 $scope.save = function() {
                     var jEntry = $scope.newEntry;
                     var jSumm = $scope.newSummary;
@@ -119,20 +101,6 @@
             $( "#datepicker" ).datepicker();
           });
 
-        // this happens when the page loads
-        /*$('document').ready(function () {
-            $('.btn').on('click', function(e) {
-                console.log(e);
-                console.log(this);
-                $('.entry').toggleClass('collapse');
-                if ($('.view').html() == "View Entry »") {
-                    $('.view').html("Hide Entry &raquo;");
-                } else {
-                    $('.view').html("View Entry &raquo;");
-                }
-            });
-        });*/
-
         </script>
     </head>
 <body ng-app="ngJournals" ng-controller="journals">
@@ -142,7 +110,7 @@
     <p>One-Line Summary: <input type="text" id="summary" ng-model="newSummary"></p>
     <p>Entry: <textarea rows="4" cols="50" id="entry" ng-model="newEntry"></textarea></p>
     <button type="button" class="btn btn-default" ng-click="save()">Save</button>
-    <div ng-journals></div>
+    <h3>Past Journal Entries</h3>
     <ul ng-repeat="post in journals">
         <li> Date: {{ post.date }} <br> Summary: {{ post.summary }} <br>
             <p class="entry collapse" id="journal{{$index}}"> <span class="content">{{ post.entry }}</span> </p>
