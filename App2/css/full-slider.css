@@ -1,0 +1,86 @@
+/*!
+ * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html,
+body {
+    height: 100%;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/*.title {
+    margin-top: -15%;
+    color: yellow;
+    color: white;
+   -webkit-text-fill-color: white;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+    font-size: 144px;
+    position: absolute;
+    font-family: 'Source Sans Pro', sans-serif;
+}*/
+
+@font-face {
+    font-family: Existence;
+    src: 'fonts/existence/ExiL-OT/Existence-Light.otf';
+}
+
+@font-face {
+    font-family: Aubrey;
+    src: 'fonts/aubrey.ttf';
+}
+
+@font-face {
+    font-family: Embers;
+    src: 'fonts/chasing_embers/chasing.ttf';
+}
+
+@font-face {
+    font-family: Sketch;
+    src: 'fonts/Sketch_Block.ttf';
+}
+
+@font-face {
+    font-family: Writing;
+    src: 'fonts/writing/writing.ttf';
+}
+
+.main-text {
+    position: absolute;
+    top: 50px;
+    width: 96.666666666666666666%;
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+    font-size: 9em;
+    font-family: 'Existence';
+}
+
+footer {
+    margin: 50px 0;
+}
+
