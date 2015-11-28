@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hashing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" media="screen">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="assets/css/github-light.css" media="screen">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap.min.js"></script>
+        <script src="assets/libs/angular.min.js"></script>
+
+        <!-- includes for datepicker -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+        <!-- stylesheet I made -->
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/pbkdf2.js"></script>
+        <script>
+             /*
+                source that advises not to use SHA for passwords: http://www.movable-type.co.uk/scripts/sha256.html
+                source with algorithm to use for passwords: https://code.google.com/p/crypto-js/#SHA-2
+            */
+        function pbkdf2(pswd) {
+            var salt = "salt"; // later, this will be from our heroku environment
+
+            var key128Bits = CryptoJS.PBKDF2(pswd, salt, { keySize: 128/32 });
+            var key256Bits = CryptoJS.PBKDF2(pswd, salt, { keySize: 256/32 });
+            var key512Bits = CryptoJS.PBKDF2(pswd, salt, { keySize: 512/32 });
+
+            // possibly the best one
+            var key512Bits1000Iterations = CryptoJS.PBKDF2(pswd, salt, { keySize: 512/32, iterations: 1000 });
+
+            console.log(key128Bits, key256Bits, key512Bits, key512Bits1000Iterations);
+        }
+        </script>
+
+    </head>
+<body>
+    Use the console to test pbkdf2() by passing it your password as a string! It will hash the password four ways and print the results of those four hashings.
+</body>
+
+</html>
