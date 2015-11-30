@@ -24,7 +24,7 @@ dreamApp.config(function($stateProvider,$urlRouterProvider){
 	
 		.state('mentee_info',{
 			url: '/mentee_info',
-			templateUrl: 'mentee_info/mentee.html'
+			templateUrl: 'mentee_info/mentee_info.html'
 	});
 	
 	
