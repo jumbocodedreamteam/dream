@@ -374,7 +374,8 @@ body {
     background: #2D47A1;
     /*#ECF0F1; #FCFCFC*/
     
-    font-family: "Courier New", Courier, monospace;
+    /*font-family: "Courier New", Courier, monospace;*/
+    font-family: "Lato", sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.471;
@@ -5663,6 +5664,10 @@ ul.verticle_bars li {
 /* *********  /progressbar  **************************** */
 /********* login ****************/
 
+.login-box {
+    padding-bottom: 20px;
+}
+
 a.hiddenanchor{
     display: none;
 }
@@ -5670,7 +5675,7 @@ a.hiddenanchor{
 #wrapper{
     right: 0px;
     margin: 0px auto;
-    margin-top: 5%;
+    margin-top: 1%;
     max-width: 350px;
     position: relative;
 }
@@ -5860,7 +5865,7 @@ form:after {
     margin: 10px 15px 0 0;
 }
 .reset_pass{margin-top:10px !important;}
-.login_content div .reset_pass{margin-top: 13px !important; margin-right: 39px; float: right;}
+.login_content div .reset_pass{margin-top: 13px !important; margin-right: 39px; }
 .separator{border-top: 1px solid #D8D8D8;
            margin-top: 10px;
            padding-top: 10px;}

@@ -29,7 +29,14 @@ angular.module('dreamApp')
 			templateUrl: 'journal/journals.html',
 			controller: 'JournalController'
 	})
-	
+    
+	    .state('request_changes',{
+			url: '/request_changes',
+			templateUrl: 'request_changes/request_changes.html'
+	//		controller: 'RequestChangesController'
+		
+	})
+    
 		.state('mentee_info',{
 			url: '/mentee_info',
 			templateUrl: 'mentee_info/mentee_info.html'
