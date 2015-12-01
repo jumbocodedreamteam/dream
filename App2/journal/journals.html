@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Journal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" media="screen">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="assets/css/github-light.css" media="screen">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap.min.js"></script>
+        <script src="assets/libs/angular.min.js"></script>
+
+        <!-- includes for datepicker -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+        <!-- stylesheet I made -->
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+        <script type="text/javascript">
+
+        var app = angular.module('ngJournals', []);
+        app.controller('journals', function($scope, $http) {
+                if (localStorage.getItem('journals') == null) {
+                    $scope.journals = [];
+                } else {
+                    $scope.journals = JSON.parse(localStorage['journals']);
+                }
+                edit_index = -1;
+
+                $scope.save = function() {
+                    var jEntry = $scope.newEntry;
+                    var jSumm = $scope.newSummary;
+                    if (edit_index != -1) {
+                        $scope.journals[edit_index] = {'entry': jEntry, 'summary': jSumm,
+                                                       'date': document.getElementById('datepicker').value};
+                    } else {
+                        $scope.journals.unshift({'entry': jEntry, 'summary': jSumm,
+                                                 'date': document.getElementById('datepicker').value});
+                    }
+                    $scope.journals.sort(compare);
+                    localStorage.setItem('journals', angular.toJson($scope.journals));
+                    edit_index = -1;
+                };
+
+                $scope.remove = function(item) {
+                    for (var i = item.$index; i < $scope.journals.length-1; i++) {
+                        $scope.journals[i] = $scope.journals[i + 1];
+                    }
+                    $scope.journals.pop();
+                    localStorage.setItem('journals', angular.toJson($scope.journals));
+                };
+
+                $scope.edit = function(item) {
+                    document.getElementById('datepicker').value = $scope.journals[item.$index]['date'];
+                    document.getElementById('summary').value = $scope.journals[item.$index]['summary'];
+                    document.getElementById('entry').value = $scope.journals[item.$index]['entry'];
+                    $scope.newEntry = $scope.journals[item.$index]['entry'];
+                    $scope.newSummary = $scope.journals[item.$index]['summary'];
+                    edit_index = item.$index;
+                };
+
+                $scope.view = function(item) {
+                    var journalid = "#journal" + item.$index;
+                    var viewid = "#view" + item.$index;
+                    $(journalid).toggleClass('collapse');
+                    if ($(viewid).html() == "View Entry »") {
+                        $(viewid).html("Hide Entry &raquo;");
+                    } else {
+                        $(viewid).html("View Entry &raquo;");
+                    }
+                }
+
+                function compare(a,b) {
+                    a_date = a['date'].split('/');
+                    b_date = b['date'].split('/')
+                    if (a_date[2] < b_date[2]) {
+                        return -1;
+                    } else if (a_date[2] > b_date[2]) {
+                        return 1;
+                    } else if (a_date[0] < b_date[0]) {
+                        return -1;
+                    } else if (a_date[0] > b_date[0]) {
+                        return 1;
+                    } else if (a_date[1] < b_date[1]) {
+                        return -1;
+                    } else if (a_date[1] > b_date[1]) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                }
+
+        });
+
+        $(function() { // makes the datepicker input box into a proper datepicker
+            $( "#datepicker" ).datepicker();
+          });
+
+        </script>
+    </head>
+<body ng-app="ngJournals" ng-controller="journals">
+    <h1>Journal</h1>
+    <h3>New Journal Entry</h3>
+    <p>Date: <input type="text" id="datepicker"></p>
+    <p>One-Line Summary: <input type="text" id="summary" ng-model="newSummary"></p>
+    <p>Entry: <textarea rows="4" cols="50" id="entry" ng-model="newEntry"></textarea></p>
+    <button type="button" class="btn btn-default" ng-click="save()">Save</button>
+    <h3>Past Journal Entries</h3>
+    <ul ng-repeat="post in journals">
+        <li> Date: {{ post.date }} <br> Summary: {{ post.summary }} <br>
+            <p class="entry collapse" id="journal{{$index}}"> <span class="content">{{ post.entry }}</span> </p>
+            <button type="button" class="view btn btn-default" ng-click="view(this)" id="view{{$index}}">View Entry &raquo;</button>
+            <button type="button" class="btn btn-default" ng-click="remove(this)">Delete</button>
+            <button type="button" class="btn btn-default" ng-click="edit(this)">Edit</button>
+        </li>
+    </ul>
+</body>
+
+</html>

@@ -22,6 +22,11 @@ dreamApp.config(function($stateProvider,$urlRouterProvider){
 			templateUrl: 'relationships/relationships.html'
 	})
 	
+		.state('journal',{
+			url: '/journal',
+			templateUrl: 'journal/journals.html'
+	})
+	
 		.state('mentee_info',{
 			url: '/mentee_info',
 			templateUrl: 'mentee_info/mentee_info.html'
