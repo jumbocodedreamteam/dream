@@ -13,7 +13,7 @@ body.nav-sm .container.body .right_col {
 }
 .right_col{min-height: 1000px;}
 body.nav-sm .navbar.nav_title {
-    width: 71px;
+    width: 70px;
 }
 
 body.nav-sm .navbar.nav_title a span {
@@ -213,7 +213,7 @@ body.nav-md .container.body .right_col {
 }
 
 .nav_title {
-    width: 231px;
+    width: 230px;
     float: left;
     background: #2D47A1;
     border-radius: 0;
@@ -585,7 +585,7 @@ h2,
 h3,
 .h3 {
     margin-top: 10px;
-    color: #EEFF41;
+    color: #2D47A1;
     margin-bottom: 10px;
 }
 
