@@ -7,12 +7,82 @@
 
 <div>
     <h1>Journal</h1>
-    <h3>New Journal Entry</h3>
-    <p>Date: <input type="text" id="datepicker"></p>
-    <p>One-Line Summary: <input type="text" id="summary" ng-model="newSummary"></p>
-    <p>Entry: <textarea rows="4" cols="50" id="entry" ng-model="newEntry"></textarea></p>
-    <button type="button" class="btn btn-default" ng-click="save()">Save</button>
-    <h3>Past Journal Entries</h3>
+    
+	
+	<div class="row">
+
+		<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2><i class="fa fa-align-left"></i> New Journal Entry </h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li><a class="collapsed" data-toggle="collapse" data-target="#newJournal"><i class="fa fa-chevron-up"></i></a>
+											</li>
+
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content collapse in" id="newJournal">
+
+										<p>Date: <input type="text" id="datepicker"></p>
+										<p>One-Line Summary: <input type="text" id="summary" ng-model="newSummary"></p>
+										<p>Entry: <textarea rows="4" cols="50" id="entry" ng-model="newEntry"></textarea></p>
+										<button type="button" class="btn btn-default" ng-click="save()">Save</button>
+
+									</div>
+
+								</div>
+							</div>
+		</div>
+	</div>
+	
+	<div class="row">
+
+		<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2><i class="fa fa-align-left"></i> Previous Journal Entries </h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li><a class="collapsed" data-toggle="collapse" data-target="#previousJournals"><i class="fa fa-chevron-up"></i></a>
+											</li>
+
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content collapse in" id="previousJournals">
+
+										<!-- start accordion -->
+										<div class="accordion" role="tablist" aria-multiselectable="true" ng-repeat="post in journals">
+											<div class="panel">
+												 <a class="panel-heading collapsed" role="tab" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne" data-target="#journal{{$index}}">
+													<h4 class="panel-title">Date: {{pose.date}} Summary: {{post.summary}}</h4>
+												</a>
+												<div id="journal{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+													<div class="panel-body">
+														<p class="entry collapse" id="entry{{$index}}"> <span class="content">{{ post.entry }}</span> </p>
+														<button type="button" class="collapsed btn btn-default" data-toggle="collapse" data-target="#entry{{$index}}">View Entry &raquo;</button>
+														<button type="button" class="btn btn-default" ng-click="remove(this)">Delete</button>
+														<button type="button" class="btn btn-default" ng-click="edit(this)">Edit</button>
+													</div>
+												</div>
+											</div>
+
+										<!-- end of accordion -->
+
+
+									</div>
+
+								</div>
+							</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<!--
+<h3>Past Journal Entries</h3>
     <ul ng-repeat="post in journals">
         <li> Date: {{ post.date }} <br> Summary: {{ post.summary }} <br>
             <p class="entry collapse" id="journal{{$index}}"> <span class="content">{{ post.entry }}</span> </p>
@@ -21,4 +91,3 @@
             <button type="button" class="btn btn-default" ng-click="edit(this)">Edit</button>
         </li>
     </ul>
-</div>
