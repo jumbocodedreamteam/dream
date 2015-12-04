@@ -1,3 +1,1 @@
-angular.module('dreamApp.relationships', [
-    
-]);
+angular.module('dreamApp.relationships', []);

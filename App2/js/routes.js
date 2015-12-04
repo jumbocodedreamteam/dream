@@ -20,8 +20,8 @@ angular.module('dreamApp')
 	
 		.state('relationships',{
 			url: '/relationships',
-			templateUrl: 'relationships/relationships.html'
-	//		controller: 'RelationshipController'
+			templateUrl: 'relationships/relationships.html',
+			controller: 'RelationshipController'
 	})
 	
 		.state('journal',{
