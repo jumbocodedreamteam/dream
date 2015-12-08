@@ -11,36 +11,10 @@
                         <div class="form-group">
                         <div class="row"></div>
                         <div class="form-group">
-                            <label class="control-label">New Emergency Contact</label>
+                            <label class="control-label">Insert Changes Below:</label>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="contact_name" placeholder="{{emergency_contact.name}}" ng-model="newContactName">
-                            <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
-                        </div>
-                        <div class="row"></div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="contact_relationship" placeholder="{{emergency_contact.relationship}}" ng-model="newContactRelationship">
-                            <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
-                        </div>
-                        <div class="row"></div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="contact_phone" placeholder="{{emergency_contact.phone}}" ng-model="newContactPhone">
-                            <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
-                        </div>
-                        <div class="row"></div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="contact_email" placeholder="{{emergency_contact.email}}" ng-model="newContactEmail">
-                            <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
-                        </div>
-                        <div class="row"></div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="contact_address" placeholder="{{emergency_contact.address}}" ng-model="newContactAddress">
-                            <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
-                        </div>
-                        <div class="row"></div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="contact_comments" placeholder="{{emergency_contact.extra}}" ng-model="newContactComments">
-                            <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
+                            <textarea class="form-control" rows="4" cols="50" id="entry" ng-model="newEntry"></textarea>
                         </div>
                         <div class="row"></div>
                         <div class="form-group" style="padding-top:15px>
