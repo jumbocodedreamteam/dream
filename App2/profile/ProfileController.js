@@ -31,9 +31,6 @@ function ProfileController($scope) {
 		
 	];
 	
-	$scope.newName = {};
-	$scope.emergEmail = {};
-	
 	$scope.submit = function(){
 		if(document.profileForm.mentorFirst.value != ""){
 			$scope.mentor.firstname = $scope.newFirst;
@@ -50,6 +47,9 @@ function ProfileController($scope) {
 		if (document.profileForm.mentorAddress.value != ""){
 			$scope.mentor.address = $scope.newAddress;
 		}
+		
+		
+		
 		document.profileForm.reset();
 	}
 	

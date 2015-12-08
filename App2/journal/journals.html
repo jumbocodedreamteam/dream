@@ -23,10 +23,37 @@
 										<div class="clearfix"></div>
 									</div>
 									<div class="x_content collapse in" id="newJournal">
-
-										<p>Date: <input type="text" id="datepicker"></p>
-										<p>One-Line Summary: <input type="text" id="summary" ng-model="newSummary"></p>
-										<p>Entry: <textarea rows="4" cols="50" id="entry" ng-model="newEntry"></textarea></p>
+										<div class="row">
+										<div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12" >Date: 
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="datepicker" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>	
+										</div>
+										<br />
+										<div class="row">
+										<div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12" >One-Line Summary: 
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="summary" ng-model="newSummary" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>	
+										</div>
+										<br />
+										<div class="row">
+										<div class="form-group">
+                                            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Entry: 
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+												<textarea class="form-control" rows="4" cols="50" id="entry" ng-model="newEntry"></textarea>
+											</div>
+                                        </div>
+										</div>
+										<br />
+										
 										<button type="button" class="btn btn-default" ng-click="save()">Save</button>
 
 									</div>
@@ -55,7 +82,7 @@
 										<div class="accordion" role="tablist" aria-multiselectable="true" ng-repeat="post in journals">
 											<div class="panel">
 												 <a class="panel-heading collapsed" role="tab" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne" data-target="#journal{{$index}}">
-													<h4 class="panel-title">Date: {{pose.date}} Summary: {{post.summary}}</h4>
+													<h4 class="panel-title">Date: {{post.date}} Summary: {{post.summary}}</h4>
 												</a>
 												<div id="journal{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 													<div class="panel-body">
