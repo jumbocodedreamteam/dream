@@ -1,6 +1,9 @@
 angular.module('dreamApp.journal')
 	.controller('JournalController', function($scope, $http) {
-                if (localStorage.getItem('journals') == null) {
+                
+	
+	
+				if (localStorage.getItem('journals') == null) {
                     $scope.journals = [];
                 } else {
                     $scope.journals = JSON.parse(localStorage['journals']);
@@ -69,5 +72,7 @@ angular.module('dreamApp.journal')
                         return 0;
                     }
                 }
+	
+			
 
         });

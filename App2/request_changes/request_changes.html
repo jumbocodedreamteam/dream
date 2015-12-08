@@ -7,68 +7,46 @@
                     <div class="clearfix"></div>
                 </div> 
                 <div class="x_content">
-                    <form class="form-horizontal form-label-left input_mask">
+                    <form class="form-horizontal form-label-left input_mask" name="changesForm">
                         <div class="form-group">
-                            <label class="control-label">Mentee</label>
-                            <div style="height:20px"></div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <select class="form-control">
-                                    <option>Choose option</option>
-                                    <option>Phone</option>
-                                    <option>Email</option>
-                                    <option>Address</option>
-                                    <option>Health Condition</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Insert Change">
-                            <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
-                        </div>
-                        <div class="row"></div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Extra Comments">
-                            <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
-                        </div>
                         <div class="row"></div>
                         <div class="form-group">
                             <label class="control-label">New Emergency Contact</label>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Name">
+                            <input type="text" class="form-control has-feedback-left" id="contact_name" placeholder="{{emergency_contact.name}}" ng-model="newContactName">
                             <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
                         </div>
                         <div class="row"></div>
                         <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Relationship">
+                            <input type="text" class="form-control has-feedback-left" id="contact_relationship" placeholder="{{emergency_contact.relationship}}" ng-model="newContactRelationship">
                             <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
                         </div>
                         <div class="row"></div>
                         <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Phone">
+                            <input type="text" class="form-control has-feedback-left" id="contact_phone" placeholder="{{emergency_contact.phone}}" ng-model="newContactPhone">
                             <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
                         </div>
                         <div class="row"></div>
                         <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Email">
+                            <input type="text" class="form-control has-feedback-left" id="contact_email" placeholder="{{emergency_contact.email}}" ng-model="newContactEmail">
                             <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
                         </div>
                         <div class="row"></div>
                         <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Address">
+                            <input type="text" class="form-control has-feedback-left" id="contact_address" placeholder="{{emergency_contact.address}}" ng-model="newContactAddress">
                             <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
                         </div>
                         <div class="row"></div>
                         <div class="col-md-6 col-sm-6 col-xs-6 form-group has-feedback">
-                            <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Extra Comments">
+                            <input type="text" class="form-control has-feedback-left" id="contact_comments" placeholder="{{emergency_contact.extra}}" ng-model="newContactComments">
                             <span class="fa fa-pencil form-control-feedback left" aria-hidden="true"></span>
                         </div>
                         <div class="row"></div>
-                        <div class="form-group" style="padding-top:15px">
+                        <div class="form-group" style="padding-top:15px>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Cancel</button>
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="button" class="btn btn-primary">Cancel</button>
+                                <button type="submit" class="btn btn-success ng-click="submit()">Submit</button>
                             </div>
                         </div>
                     </form>

@@ -21,7 +21,7 @@ angular.module('dreamApp')
 		.state('relationships',{
 			url: '/relationships',
 			templateUrl: 'relationships/relationships.html',
-			controller: 'RelationshipController'
+			controller: 'RelationshipsController'
 	})
 	
 		.state('journal',{
@@ -32,15 +32,15 @@ angular.module('dreamApp')
     
 	    .state('request_changes',{
 			url: '/request_changes',
-			templateUrl: 'request_changes/request_changes.html'
-	//		controller: 'RequestChangesController'
+			templateUrl: 'request_changes/request_changes.html',
+			controller: 'RequestChangesController'
 		
 	})
     
 		.state('mentee_info',{
 			url: '/mentee_info',
-			templateUrl: 'mentee_info/mentee_info.html'
-	//		controller: 'MenteeController'
+			templateUrl: 'mentee_info/mentee_info.html',
+			controller: 'InfoController'
 	});
 	
 	

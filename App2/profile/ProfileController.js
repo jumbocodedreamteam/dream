@@ -48,9 +48,16 @@ function ProfileController($scope) {
 			$scope.mentor.address = $scope.newAddress;
 		}
 		
-		
+		for (var i=0; i<$scope.contacts.length; i++){
+			if (document.getElementById("name" + i).value != "")
+				$scope.contacts[i].name = document.getElementById("name" + i).value;
+			if (document.getElementById("email" + i).value != "")
+				$scope.contacts[i].email = document.getElementById("email" + i).value;
+			$scope.contacts[i].relationship = document.getElementById("picker" + i).value;
+		}
 		
 		document.profileForm.reset();
+		document.emergency.reset();
 	}
 	
 }
