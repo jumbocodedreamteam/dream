@@ -21,7 +21,7 @@ angular.module('dreamApp')
 		.state('relationships',{
 			url: '/relationships',
 			templateUrl: 'relationships/relationships.html',
-			controller: 'RelationshipController'
+			controller: 'RelationshipsController'
 	})
 	
 		.state('journal',{
