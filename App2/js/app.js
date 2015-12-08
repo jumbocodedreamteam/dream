@@ -1,1 +1,1 @@
-angular.module('dreamApp',['ui.router','dreamApp.journal','dreamApp.profile', 'dreamApp.relationships']);
+angular.module('dreamApp',['ui.router','dreamApp.journal','dreamApp.profile', 'dreamApp.relationships','dreamApp.request_changes']);

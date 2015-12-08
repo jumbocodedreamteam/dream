@@ -32,8 +32,8 @@ angular.module('dreamApp')
     
 	    .state('request_changes',{
 			url: '/request_changes',
-			templateUrl: 'request_changes/request_changes.html'
-	//		controller: 'RequestChangesController'
+			templateUrl: 'request_changes/request_changes.html',
+			controller: 'RequestChangesController'
 		
 	})
     
