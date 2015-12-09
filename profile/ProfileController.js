@@ -20,12 +20,12 @@ function ProfileController($scope) {
 	$scope.contacts = [
 		{
 			name: "Name",
-			relationship: "Choose One",
+			relationship: "Relationship",
 			email: "Email"
 		},
 		{
 			name: "Name",
-			relationship: "Choose One",
+			relationship: "Relationship",
 			email: "Email"
 		}
 		
