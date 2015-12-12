@@ -5,23 +5,23 @@ ProfileController.$inject = ['$scope'/*,'ProfileService'*/];
 
 function ProfileController($scope) {
 	$scope.mentee = {
-		name: "id:Name",
-		dob: "Date of Birth"
+		name: "Andrew Johnson",
+		dob: "12/1/2012"
 	};
 	
 	$scope.mentor = {
-		firstname: "First Name",
-		lastname: "Last Name",
-		email: "Email",
-		phone: "Phone",
-		address: "Address"
+		firstname: "Samuel",
+		lastname: "Rothchild",
+		email: "samuel.rothchild@gmail.com",
+		phone: "603-643-7426",
+		address: "Maxwell Hall Dartmouth University, Hanover, NH"
 	};
 	
 	$scope.contacts = [
 		{
-			name: "Name",
-			relationship: "Relationship",
-			email: "Email"
+			name: "Linda Rothchild",
+			relationship: "Mother",
+			email: "rothchildFam@gmail.com"
 		},
 		{
 			name: "Name",

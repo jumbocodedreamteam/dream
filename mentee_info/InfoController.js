@@ -6,39 +6,39 @@ InfoController.$inject = ['$scope'/*,'ProfileService'*/];
 function InfoController($scope) {
 
 	$scope.mentee = {
-		name: "id:Name",
-		age: "id:Age_c",
-		gender: "id:Gender_c"
+		name: "Andrew Johnson",
+		age: "13",
+		gender: "Male"
 	};
 
 	$scope.personal = {
-		houseLang: "id:Household_Language_c",
-		address: "id:Address",
-		email: "id:Email",
-		birthDate: "id:Birthdate_c"
+		houseLang: "Spanish",
+		address: "52 East Wheelock St, Hanover NH",
+		email: "aj2002@gmail.com",
+		birthDate: "12/1/2002"
 		
 	};
 	
 	$scope.health = {
-		physician: "id:Physician_Name_c",
-		physPhone: "id:Physician_Phone_Number_c",
-		meds: "id:Prescription_Medication_Taken_Regularly_c",
-		swallowPills: "id:Able_to_Swallow_Pill_c",
-		medConditions: "id:Current_Medical_Conditions_c",
-		allergies: "id:Current_Allergies_c"
+		physician: "Lawrence Aldrich",
+		physPhone: "603-643-1287",
+		meds: "None",
+		swallowPills: "Yes",
+		medConditions: "None",
+		allergies: "Gluten"
 		
 	};
 	
 	$scope.contacts = [
 		{
-			name: "John Doe",
-			phone: "555-555-5555",
-			relationship: "Friend"
+			name: "Andrea Johnson",
+			phone: "603-643-1287",
+			relationship: "Mother"
 		},
 		{
-			name: "Contact 2",
-			phone: "555-555-5555",
-			relationship: "Friend"
+			name: "Frank Johnson",
+			phone: "603-643-1287",
+			relationship: "Father"
 		}
 	];
 }

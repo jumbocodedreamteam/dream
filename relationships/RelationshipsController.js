@@ -5,56 +5,49 @@ RelationshipsController.$inject = ['$scope'/*, 'Relationships'*/];
 
 function RelationshipsController($scope) {
     $scope.emergency_contacts = [
-        {
-            name:'Ginetta Sagan', 
-            relationship:'Mother', 
-            phone: '123-456-7890',
-            address: 'Tufts University',
-            email: 'ginetta.sagan@tufts.edu'
-        },
-        {
-            name:'Zach Lee', 
-            relationship:'Teacher', 
-            phone: '123-456-7890',
-            address: 'Tufts University',
-            email: 'zach.lee@tufts.edu'
-        },
-        {
-            name:'Judy Li', 
-            relationship:'Aunt', 
-            phone: '123-456-7890',
-            address: 'Tufts University',
-            email: 'judy.li@tufts.edu'
-        }
+		{
+			name: "Andrea Johnson",
+			phone: "603-643-1287",
+			relationship: "Mother",
+            address: '52 East Wheelock St, Hanover NH',
+            email: 'andrea.johnson@gmail.com'
+		},
+		{
+			name: "Frank Johnson",
+			phone: "603-643-1287",
+			relationship: "Father",
+            address: '52 East Wheelock St, Hanover NH',
+            email: 'frank.johnson@gmail.com'
+		}
     ];
     $scope.family_contacts = [
         {
-            name:'Ginetta Sagan', 
-            relationship:'Mother', 
-            phone: '123-456-7890',
-            address: 'Tufts University',
-            email: 'ginetta.sagan@tufts.edu'
-        },
+			name: "Andrea Johnson",
+			phone: "603-643-1287",
+			relationship: "Mother",
+            address: '52 East Wheelock St, Hanover NH',
+            email: 'andrea.johnson@gmail.com'
+		},
+		{
+			name: "Frank Johnson",
+			phone: "603-643-1287",
+			relationship: "Father",
+            address: '52 East Wheelock St, Hanover NH',
+            email: 'frank.johnson@gmail.com'
+		},
         {
-            name:'Paul Sagan', 
-            relationship:'Father', 
-            phone: '123-456-7890',
-            address: 'Tufts University',
-            email: 'paul.sagan@tufts.edu'
-        },
-        {
-            name:'James Sagan', 
+            name:'Michael Johnson', 
             relationship:'Brother', 
-            phone: '123-456-7890',
-            address: 'Tufts University',
-            email: 'james.sagan@tufts.edu'
+            phone: '603-686-9753',
+            address: 'Cohen Hall Darthmouth University, Hanover NH',
+            email: 'michael.johnson@dartmouth.edu'
         },
         {
-            name:'Jane Sagan', 
+            name:'Sarah Johnson', 
             relationship:'Sister', 
-            phone: '123-456-7890',
-            address: 'Tufts University',
-            email: 'Jane.sagan@tufts.edu'
+            phone: '603-686-9365',
+            address: 'Bissel Hall Dartmouth University, Hanover NH',
+            email: 'sarah.johnson@dartmouth.edu'
         }
     ];
 }
