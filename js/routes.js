@@ -7,8 +7,8 @@ angular.module('dreamApp')
 	
 		.state('slider',{
 			url: '/slider',
-			templateUrl: 'homepage/slider.html'
-	//		controller: 'HomepageController'
+			templateUrl: 'homepage/slider.html',
+	 		controller: 'HomepageController'
 		
 	})
 	
