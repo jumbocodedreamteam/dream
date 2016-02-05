@@ -17,30 +17,23 @@ angular.module('dreamApp')
 			templateUrl: 'profile/profile.html',
 			controller: 'ProfileController'
 	})
-	
-		.state('relationships',{
-			url: '/relationships',
-			templateUrl: 'relationships/relationships.html',
-			controller: 'RelationshipsController'
-	})
-	
+
 		.state('journal',{
 			url: '/journal',
 			templateUrl: 'journal/journals.html',
 			controller: 'JournalController'
 	})
-    
-	    .state('request_changes',{
-			url: '/request_changes',
-			templateUrl: 'request_changes/request_changes.html',
-			controller: 'RequestChangesController'
+   
+		.state('attendance',{
+			url: '/attendance',
+			templateUrl: 'attendance/attendance.html',
+			controller: 'AttendanceController'
 		
 	})
-    
-		.state('mentee_info',{
-			url: '/mentee_info',
-			templateUrl: 'mentee_info/mentee_info.html',
-			controller: 'InfoController'
+		.state('mentees_info',{
+			url: '/mentees_info',
+			templateUrl: 'mentees_info/mentees_info.html',
+			controller: 'MenteesInfoController'
 	});
 	
 	
