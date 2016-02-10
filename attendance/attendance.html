@@ -64,9 +64,11 @@
 										<br />
 										<div class="row">
 										<div class="form-group">
-                                          
-										<div ng-repeat="mentee in menteesList">
-											<input type="checkbox" id="{{mentee}}" value="{{mentee}}" data-parsley-mincheck="2" required class="flat" /> {{mentee}}
+                                      
+										<div ng-repeat="mentee in menteesList" class="checkbox">
+											<label>
+											<input type="checkbox" id="{{mentee}}" value="{{mentee}}" class="icheckbox_flat-green" /> {{mentee}}
+											</label>
                                             <br />
 											</div>
 											<br />
