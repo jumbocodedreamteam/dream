@@ -94,11 +94,21 @@
 
                         <div class="menu_section">
                             <ul class="nav side-menu">
+                               <li><a><i class="fa fa-graduation-cap"></i> Mentee <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="#" ui-sref="mentee_info" onclick="close_bar()" >Info</a>
+                                        </li>
+                                        <li><a href="#" ui-sref="relationships" onclick="close_bar()">Relationships</a>
+                                        </li>
+                 <!--                       <li><a href="#">Evaluation Data</a>
+                                        </li> -->
+                                        <li><a href="#" ui-sref="journal" onclick="close_bar()">Journal</a>
+                                        </li>
+                                        <li><a href="#" ui-sref="request_changes" onclick="close_bar()">Request Changes</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                
-                                <li><a><i class="fa fa-graduation-cap"></i> Mentees <span class="fa fa-chevron-down"></span></a>
-                                </li>
-								<li><a ui-sref="attendance" onclick="close_bar()"><i class="fa fa-check-square-o" ></i> Attendance </a>
-                                </li>
                                 <li><a><i class="fa fa-home"></i> Dream <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="https://fs11.formsite.com/mfoote/receipts/index.html" onclick="close_bar()">Receipts</a>
